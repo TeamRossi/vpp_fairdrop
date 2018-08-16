@@ -1,0 +1,14 @@
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 350	input = 7.7945e6	Output = 7.7236e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 700	input = 7.3829e6	Output = 6.9417e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 1050	input = 7.2647e6	Output = 6.7036e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 1400	input = 7.2049e6	Output = 6.5413e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 1750	input = 6.7051e6	Output = 5.8117e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 2100	input = 7.1729e6	Output = 6.4618e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 2450	input = 7.1763e6	Output = 6.4739e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 2800	input = 7.1286e6	Output = 6.3641e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 3150	input = 7.1274e6	Output = 6.4306e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 3500	input = 7.0201e6	Output = 6.3447e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 3850	input = 7.1034e6	Output = 6.3960e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 4200	input = 7.0101e6	Output = 6.3447e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 4550	input = 7.1698e6	Output = 6.3582e6
+Rate = 10Gbps	Pktsize = 64	heavy_weight = 4900	input = 7.1473e6	Output = 5.9589e6
