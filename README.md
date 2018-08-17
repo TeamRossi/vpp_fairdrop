@@ -34,3 +34,29 @@ Network Interfaces
 2x Intel X520 NICs, dual prort, 10Gbps, full duplex, directly connected with SFP+ cables.
 ```
 # Getting Started
+
+### Get Repository
+git clone https://github.com/TeamRossi/vpp_fairdrop.git
+
+### Setup
+
+1) Edit the file config.sh in scripts folder
+  a) EXP=/path/to/vpp_fairdrop
+  b) Configure all the variables in the linecards and cpu section to match your linecards and CPU
+2) add this line at the end of $HOME/.bashrc `source /path/to/vpp_fairdrop/scripts/config.sh`
+3) make setup
+4) Thats all! Ready for experiments.
+
+### How to run experiments
+
+Simple make commands will run all the experiments corresponding to CPU and Bandwidth Fairdrop.
+
+#### Bandwidth Fairdrop Experiments
+
+The commands below will run all the experiments for bandwidth fairdrop. The raw data from the experiments can be found in the results folder and the plots can be found in plots folder.
+make command with suffix otcs correspond to OTCS Journal submission experiments and suffix networking correspond to experiments presented in IFIP networking 2018.
+
+```
+make run-bandwidth-experiments-otcs
+make run-bandwidth-experiments-networking
+```
