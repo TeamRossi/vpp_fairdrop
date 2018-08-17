@@ -43,7 +43,7 @@ git clone https://github.com/TeamRossi/vpp_fairdrop.git
 ### Setup
 
 1. Edit the file config.sh in scripts folder
-  *  __EXP=/path/to/vpp_fairdrop__ *
+  *  __EXP=/path/to/vpp_fairdrop__
   * Change the values of all the variables in the linecards and cpu section to match your linecards and CPU
 2. `source /path/to/vpp_fairdrop/scripts/config.sh` add this line at the end of $HOME/.bashrc
 3. After making the changes, source config.sh or open a new terminal
