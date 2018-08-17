@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="52.030281mm"
+   height="34.324169mm"
+   viewBox="0 0 184.35926 121.62107"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="testbed.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="48.129592"
+     inkscape:cy="163.58796"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-77.668245,-245.70954)">
+    <g
+       id="g4253"
+       transform="matrix(1.0008437,0,0,0.8593828,-0.17576221,34.639918)">
+      <rect
+         y="246.85974"
+         x="79.032074"
+         height="138.33885"
+         width="70.448395"
+         id="rect4136"
+         style="opacity:0.919;fill:#505050;fill-opacity:0;stroke:#000000;stroke-width:2.50737762;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <flowRoot
+         transform="matrix(0.75867507,0,0,0.92074881,18.879978,21.629664)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4138"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4140"><rect
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, '"
+             y="306.64792"
+             x="79.64286"
+             height="31.428572"
+             width="92.85714"
+             id="rect4142" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';text-align:center;text-anchor:middle"
+           id="flowPara4144">TGS</flowPara></flowRoot>      <rect
+         y="269.34293"
+         x="138.41946"
+         height="13.951451"
+         width="11.495663"
+         id="rect4188"
+         style="opacity:0.919;fill:#505050;fill-opacity:0;stroke:#000000;stroke-width:0.83579254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="354.39069"
+         x="138.48109"
+         height="13.951451"
+         width="11.495663"
+         id="rect4188-7"
+         style="opacity:0.919;fill:#505050;fill-opacity:0;stroke:#000000;stroke-width:0.83579254;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4244"
+       transform="matrix(0.7593151,0,0,0.79127569,-4.3916363,51.24989)">
+      <flowRoot
+         transform="translate(180.0438,2.4386529)"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="flowRoot4138-2"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4140-5"><rect
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, '"
+             y="306.64792"
+             x="79.64286"
+             height="31.428572"
+             width="92.85714"
+             id="rect4142-9" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';text-align:center;text-anchor:middle"
+           id="flowPara4144-1">SUT</flowPara></flowRoot>      <rect
+         y="247.71112"
+         x="256.51056"
+         height="150.24602"
+         width="92.85714"
+         id="rect4136-6"
+         style="opacity:0.919;fill:#505050;fill-opacity:0;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="271.67801"
+         x="257.56348"
+         height="15.152288"
+         width="15.152288"
+         id="rect4188-74"
+         style="opacity:0.919;fill:#505050;fill-opacity:0;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="364.04605"
+         x="257.64471"
+         height="15.152288"
+         width="15.152288"
+         id="rect4188-7-1"
+         style="opacity:0.919;fill:#505050;fill-opacity:0;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 4;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 143.45516,271.98112 50.34962,0 c 7.75999,21.61234 7.01495,42.09704 7.01495,42.09704 0,10.40736 -5.36947,32.2224 -5.36947,32.2224 -24.82625,0 -51.9951,0.2288 -51.9951,0.2288"
+       id="path4234"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4281"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(-0.4035508,15.515229)"><flowRegion
+         id="flowRegion4283"><rect
+           id="rect4285"
+           width="30.304577"
+           height="18.687822"
+           x="119.70308"
+           y="247.27063"
+           style="font-size:12.5px" /></flowRegion><flowPara
+         id="flowPara4287"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:#000000;fill-opacity:0.55459768">Tx</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4281-6"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(85.70344,90.36916)"><flowRegion
+         id="flowRegion4283-2"><rect
+           id="rect4285-9"
+           width="30.304577"
+           height="18.687822"
+           x="119.70308"
+           y="247.27063"
+           style="font-size:12.5px" /></flowRegion><flowPara
+         id="flowPara4287-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:#000000;fill-opacity:0.55459768">Tx</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4281-0"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(86.728791,15.440228)"><flowRegion
+         id="flowRegion4283-3"><rect
+           id="rect4285-7"
+           width="30.304577"
+           height="18.687822"
+           x="119.70308"
+           y="247.27063"
+           style="font-size:12.5px" /></flowRegion><flowPara
+         id="flowPara4287-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:#000000;fill-opacity:0.55459768">Rx</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4281-0-3"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(0.5481,90.10927)"><flowRegion
+         id="flowRegion4283-3-5"><rect
+           id="rect4285-7-1"
+           width="30.304577"
+           height="18.687822"
+           x="119.70308"
+           y="247.27063"
+           style="font-size:12.5px" /></flowRegion><flowPara
+         id="flowPara4287-2-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:'Latin Modern Roman';-inkscape-font-specification:'Latin Modern Roman, ';fill:#000000;fill-opacity:0.55459768">Rx</flowPara></flowRoot>  </g>
+</svg>
