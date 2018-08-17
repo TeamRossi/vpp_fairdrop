@@ -1,6 +1,8 @@
 # Fairdrop VPP
 
-This repository contains all the scripts required to reproduce the experimental section in the paper "V.Addanki, L.Linguaglossa, J.Roberts, D.Rossi Controlling software router resources by fair packet dropping" presented in IFIP networking 2018. The scripts can also reproduce the experimental section in the extended journal submission of the paper in OTCS. VPP stands for "Vector Packet Processing", a novel packet processing application which is part linux foundation project FD.io. We use VPP as the software routing application in our experiments.
+This repository contains all the scripts required to reproduce the experimental section in the paper "V. Addanki, L. Linguaglossa, J. Roberts and D. Rossi. Controlling software router resource sharing by fair packet dropping" presented at IFIP networking 2018. The scripts can also reproduce the experimental section in the extended journal submission of the paper in OTCS. VPP stands for "Vector Packet Processing", a novel packet processing application which is part linux foundation project FD.io. We use VPP as the software routing application in our experiments.
+
+We propose an exact fairdropping algorithm to achieve resource fainess among flows in a software router. Please refer the paper referenced above for more details on the algorithm and its implementation in VPP.
 
 ## Test-bed
 
