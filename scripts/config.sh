@@ -66,7 +66,7 @@ export RTE_PKTGEN=$EXP/pktgen-3.1.2
 export RTE_TARGET=x86_64-native-linuxapp-gcc
 
 #FLOW MONITOR
-export FLOW="/home/vk/FLOW_MONITOR/DPDK-FlowCount"
+export FLOW=$EXP/FlowMon/DPDK-FlowMon
 
 # Config
 export CONFIG_DIR=/home/leos/vpp-bench/scripts
