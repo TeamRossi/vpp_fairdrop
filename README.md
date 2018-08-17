@@ -2,7 +2,7 @@
 
 This repository contains all the scripts required to reproduce the experimental section in the paper "V. Addanki, L. Linguaglossa, J. Roberts and D. Rossi. Controlling software router resource sharing by fair packet dropping" presented at IFIP networking 2018. The scripts can also reproduce the experimental section in the extended journal submission of the paper in OTCS. VPP stands for "Vector Packet Processing", a novel packet processing application which is part linux foundation project FD.io. We use VPP as the software routing application in our experiments.
 
-We propose an exact fairdropping algorithm to achieve resource fainess among flows in a software router. Please refer the paper referenced above for more details on the algorithm and its implementation in VPP.
+We propose an exact fairdropping algorithm to achieve resource fairness among flows in a software router. Please read the paper referenced above for more details on the algorithm and its implementation in VPP.
 
 ## Test-bed
 
@@ -43,9 +43,9 @@ git clone https://github.com/TeamRossi/vpp_fairdrop.git
 ### Setup
 
 1. Edit the file config.sh in scripts folder
-  *  __EXP=/path/to/vpp_fairdrop__ *($EXP will be used in rest of the Readme as path to vpp_fairdrop)*
-  * Configure all the variables in the linecards and cpu section to match your linecards and CPU
-2. add this line at the end of $HOME/.bashrc `source /path/to/vpp_fairdrop/scripts/config.sh`
+  *  __EXP=/path/to/vpp_fairdrop__ *
+  * Change the values of all the variables in the linecards and cpu section to match your linecards and CPU
+2. `source /path/to/vpp_fairdrop/scripts/config.sh` add this line at the end of $HOME/.bashrc
 3. After making the changes, source config.sh or open a new terminal
 4. `cd $EXP && make setup`
 5. Thats all! Ready for experiments.
