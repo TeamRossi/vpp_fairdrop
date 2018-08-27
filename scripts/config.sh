@@ -1,6 +1,24 @@
 #!/bin/bash
 
-# Linecards
+#############################################################################################################
+#					PLEASE CONFIGURE THE VARIABLES ONLY THIS SECTION TO MATCH YOUR TESTBED					#
+#############################################################################################################
+
+#################################################################
+#							 ____________________________		#
+#	Pktgen			FlowMon	|			 VPP			 |		#
+#	######################	|	######################	 |		#
+#   #     Line card 0    #	|	#     Line card 1    #	 |		#
+#   ##Port-0#####Port-1###	|	##Port-0#####Port-1###	 |		#
+#	Tx	|	   Rx /|\_______|	   /|\Rx	Tx\|/________|		#
+#	   \|/__________________________|							#
+#																#
+#																#
+#																#
+#																#
+#################################################################
+
+# Linecards PCI Address
 export LC0P0=0000:0b:00.0
 export LC0P1=0000:0b:00.1
 export LC1P0=0000:84:00.0
@@ -31,24 +49,45 @@ export DEVLC1P0="enp132s0f0"
 export DEVLC1P1="enp132s0f1"
 
 # IP addresses
-export IPLC0P0="1.1.1.11"
-export IPLC0P1="1.1.1.12"
-export IPLC1P0="1.1.1.21"
-export IPLC1P1="1.1.1.22"
 
-# IP6 addresses
-export IP6LC1P0="2011:2::ffff"
-export IP6LC1P1="2011:3::ffff"
+export IPV4_VPP_INTERFACE0="192.168.2.2/32"	#This can be left unchanged
+export IPV4_VPP_INTERFACE1="192.168.2.3/32"	#This can be left unchanged
+export IPV4_VPP_IPROUTE="137.194.208.1"		#This can be left unchanged
 
-export IPLOOP="10.0.0.0"
-export IP6LOOP="2011:1::ffff"
+#	CPU CORES
+export AVAILABLE_CPU_LCORES_FLOWMON=(9 10 11)
+export AVAILABLE_CPU_LCORES_PKTGEN=(28 29 30 31 32)
+export AVAILABLE_ISOCPU_LCORES_VPP=(20 21 22 23)
 
-# Default routes
-export DEFAULTIP="99.99.99.99"
-export DEFAULTIP6="2211:2::ffff"
+# Experiment directory
+export EXP=/home/vk/otcs/reproducibility
+
+
+#############################################################
+#					END OF CONFIGURATION.					#
+#		NO FURTHER CHANGES ARE REQUIRED IN THIS FILE.		#
+#############################################################
+
+#######VPP CPU CORES#############
+export VPP_CPUCORE_MAIN=${AVAILABLE_ISOCPU_LCORES_VPP[0]}			#VPP CPU MAIN CORE FOR ANY EXPERIMENT
+export VPP_CPUCORE_BW_WORKER_1=${AVAILABLE_ISOCPU_LCORES_VPP[1]}	#VPP CPU worker core 1 for any bandwidth fairdrop experiment
+export VPP_CPUCORE_BW_WORKER_2=${AVAILABLE_ISOCPU_LCORES_VPP[2]}	#VPP CPU worker core 2 for bandwidth fairdrop multicore experiment
+export VPP_CPUCORE_BW_FD=${AVAILABLE_ISOCPU_LCORES_VPP[3]}			#VPP CPU fairdrop core for bandwidth fairdrop multicore experiment
+export VPP_CPUCORE_WORKER_1=${AVAILABLE_ISOCPU_LCORES_VPP[1]}		#VPP CPU worker core for any cpu fairdrop experiment
+
+########PKTGEN CPU CORES###################
+export PKTGEN_MAINCORE=${AVAILABLE_CPU_LCORES_PKTGEN[0]}	#Pktgen Main core
+export PKTGEN_CORE_1=${AVAILABLE_CPU_LCORES_PKTGEN[1]}		#Pktgen worker core 1 -rx
+export PKTGEN_CORE_2=${AVAILABLE_CPU_LCORES_PKTGEN[2]}		#Pktgen worker core 2 -rx
+export PKTGEN_CORE_3=${AVAILABLE_CPU_LCORES_PKTGEN[3]}		#Pktgen worker core 1 -tx
+export PKTGEN_CORE_4=${AVAILABLE_CPU_LCORES_PKTGEN[4]}		#Pktgen worker core 2 -tx
+
+#########FlowMon CPU CORES################
+export FLOWMON_MAINCORE=${AVAILABLE_CPU_LCORES_FLOWMON[0]}	#FlowMon Main core
+export FLOWMON_CORE_1=${AVAILABLE_CPU_LCORES_FLOWMON[1]}	#FlowMon Worker core 1
+export FLOWMON_CORE_2=${AVAILABLE_CPU_LCORES_FLOWMON[2]}	#FlowMon Worker core 2
 
 #Experiments
-export EXP=/home/vk/otcs/reproducibility
 export RESULTS=$EXP/results
 export SCRIPTS=$EXP/scripts
 export PLOTS=$EXP/plots
@@ -66,7 +105,7 @@ export RTE_PKTGEN=$EXP/pktgen-3.1.2
 export RTE_TARGET=x86_64-native-linuxapp-gcc
 
 #FLOW MONITOR
-export FLOW="/home/vk/FLOW_MONITOR/DPDK-FlowCount"
+export FLOW=$EXP/FlowMon/DPDK-FlowMon
 
 # Config
 export CONFIG_DIR=/home/leos/vpp-bench/scripts
