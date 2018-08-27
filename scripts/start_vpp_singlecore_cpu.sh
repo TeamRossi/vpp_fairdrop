@@ -1,20 +1,20 @@
-MAIN=21 #21
-WORKER=22 #22
-WORKER1=23
+MAIN=$VPP_CPUCORE_MAIN
+WORKER1=$VPP_CPUCORE_WORKER_1
 DPDK1=$LC1P0
 DPDK2=$LC1P1
 sudo killall vpp_main
 cd $VPP_ROOT
 sudo make build-release
-sudo -E $SCRIPTS/start_vpp_l3_singlecore_cpu.sh $MAIN $WORKER $WORKER1 $DPDK1 $DPDK2 &
+sudo -E $SCRIPTS/start_vpp_l3_singlecore_cpu.sh $MAIN $WORKER1 $DPDK1 $DPDK2 &
 sleep 25
 sudo -E  $SCRIPTS/ctl_singlecore_cpu.sh
+
 if [[ $MAIN -le 11 || ($MAIN -gt 23 && $MAIN -le 35) ]];then
 MAIN_NUMA=0
 else
 MAIN_NUMA=1
 fi
-if [[ $WORKER -le 11 || ($WORKER -gt 23 && $WORKER -le 35) ]];then
+if [[ $WORKER1 -le 11 || ($WORKER1 -gt 23 && $WORKER1 -le 35) ]];then
 WORKER_NUMA=0
 else
 WORKER_NUMA=1

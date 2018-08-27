@@ -1,14 +1,14 @@
-MAIN=20 #21
-WORKER1=21 #22
-WORKER2=22
-HQOS=23
+MAIN=$VPP_CPUCORE_MAIN
+WORKER1=$VPP_CPUCORE_BW_WORKER_1
+WORKER2=$VPP_CPUCORE_BW_WORKER_2
+FD=$VPP_CPUCORE_BW_FD
 DPDK1=$LC1P0
 DPDK2=$LC1P1
 
 sudo killall vpp_main
 cd $VPP_ROOT
 sudo make build-release
-sudo -E $SCRIPTS/start_vpp_l3_multicore.sh $MAIN $WORKER1 $WORKER2 $HQOS $DPDK1 $DPDK2 &
+sudo -E $SCRIPTS/start_vpp_l3_multicore.sh $MAIN $WORKER1 $WORKER2 $FD $DPDK1 $DPDK2 &
 sleep 25
 sudo -E  $SCRIPTS/ctl_multicore.sh
 
@@ -33,7 +33,3 @@ else
 DPDK2_NUMA=0
 fi
 echo -e "VPP Configuration:\nMain-Core on Core: $MAIN Numa: $MAIN_NUMA\nWorker on core: $WORKER Numa: $WORKER_NUMA\nDPDK Interface-RX $DPDK1 on Numa: $DPDK1_NUMA\nDPDK Interface-TX $DPDK2 on Numa $DPDK2_NUMA\n"
-#	sleep 0.01
-#	sudo killall vpp_main
-#sudo $SFLAG $BINS/vppctl -p vpp3
-#sudo vppctl -p vpp1
