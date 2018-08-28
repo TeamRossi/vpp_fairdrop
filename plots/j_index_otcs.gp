@@ -19,7 +19,7 @@
 #-------------------------------------
 set terminal pdf
 set out "j_index_otcs.pdf"
-set size 1,0.7
+#set size 1,0.7
 i="./../results/"
 ifilefd=i."jain_perclass_2_fairfx_160.dat"
 ifiletd=i."jain_perclass_2_tail_160.dat"

@@ -28,8 +28,8 @@
 
 #Happy gnuplotting
 
-set out "figure4_otcs.pdf"
-set term pdf font "Times,18"
+#set out "figure4_otcs.pdf"
+#set term pdf font "Times,18"
 set pointsize 1.25
 
 set key top righ
