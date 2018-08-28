@@ -1,9 +1,9 @@
 all:
-	g++ main.c -o cpu-stat.o
+	g++ main.c -o bw-stat.o
 
 
 run: all
-	./cpu-stat.o
+	./bw-stat.o
 
 log: all
-	./cpu-stat.o > simulation.dat
+	./bw-stat.o > simulation.dat
