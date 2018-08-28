@@ -46,7 +46,7 @@ printdata(SIZE, inputp, outputp, noloss, rate);
 --os.execute("/home/vk/scripts_cpu/runs.sh 'show interface' > /tmp/data ");
 --os.execute("/home/vk/scripts_cpu/runs.sh 'show run' > /tmp/show ");
 pktgen.stop(0);
-os.execute("sudo kill -2 $(pidof FlowCount)");
+os.execute("sudo kill -2 $(pidof FlowMon-DPDK)");
 io.close(file);
 pktgen.delay(5000);
 os.execute("echo DONE");
