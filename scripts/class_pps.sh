@@ -1,20 +1,15 @@
+# results folders naming ---> FAIRDROP_CPU_"$WEIGHT"_"$N_HEAVY"_"$DROP_MECH"SIZE_"$PKT_SIZE"
+# $1=$N_HEAVY is the number of heavy flows used in the experiment. By default it is 2.
+# $2=$DROP_MECH which is the dropping mechanism which belongs to {FAIRFX TAIL}
+# $3=$PKT_SIZE which is the packet size used in the experiment. Default value is 64.
+# $4 is the weight increment value. It is either 310 or 350 in our experiments. 350 for experiments of networking and 310 for experiments of otcs.
+
+#####################################    HOW TO USE THIS SCRIPT    #######################################################
+#After running a full cpu experiment with results from weight ratios 1 to 14, you can run this script without any errors.#
+# class_pps.sh <N_HEAVY> <DROP_MECH> <PKT_SIZE> <WEIGHT_INC>                                                             #
+##########################################################################################################################
 i=$3
 
-#EXP=/home/vk/otcs
-#RESULTS=/home/vk/otcs/results/FAIRDROP_CPU
-#SCRIPTS=/home/vk/otcs/scripts
-
-# ALG[0]=FAIRFX
-# ALG[1]=FAIRAD
-# ALG[2]=TAIL
-
-# A[0]=fairfx
-# A[1]=fairad
-# A[2]=tail
-
-# B[0]=fairdrop_cpu_shadowact_fxth
-# B[1]=fairdrop_cpu_shadowact_adth
-# B[2]=busyloops_nofairdrop
 WEIGHT=$4
 LIMIT=$WEIGHT*14
 while [[ $WEIGHT -le $LIMIT ]];do
@@ -23,7 +18,7 @@ while [[ $WEIGHT -le $LIMIT ]];do
 	CLASS_1=$(cat $RESULTS/"$j"_"$i"/flow_pps.dat | grep 4157820474 | awk '{print $1}')
 	CLASS_2=$(cat $RESULTS/"$j"_"$i"/flow_pps.dat | head --lines 1 | awk '{print $1}')
 	CLOCK_1=$(python -c "print($CLASS_1 * $WEIGHT)")
-	CLOCK_2=$(python -c "print($CLASS_2 * 310)")
+	CLOCK_2=$(python -c "print($CLASS_2 * $4)")
 
 	SUM=$(python -c "print($CLASS_1+$CLASS_2)")
 	SQ=$(python -c "print(($CLASS_1*$CLASS_1)+($CLASS_2*$CLASS_2))")

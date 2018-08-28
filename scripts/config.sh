@@ -51,8 +51,8 @@ export DEVLC1P1="enp132s0f1"
 
 # IP addresses
 
-export IPV4_VPP_INTERFACE0="192.168.2.2/32"	#This can be left unchanged
-export IPV4_VPP_INTERFACE1="192.168.2.3/32"	#This can be left unchanged
+export IPV4_VPP_INTERFACE0="192.168.2.3/32"	#This can be left unchanged
+export IPV4_VPP_INTERFACE1="192.168.2.2/32"	#This can be left unchanged
 export IPV4_VPP_IPROUTE="137.194.208.1"		#This can be left unchanged
 
 #	CPU CORES
