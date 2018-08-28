@@ -5,7 +5,7 @@ sudo killall pktgen
 
 	echo -e "\nPktgen-->VPP-->FlowMonitor\n"
 	cd $FLOW
-	sudo -E ./build/FlowCount -l $FLOWMON_MAINCORE,$FLOWMON_CORE_1,$FLOWMON_CORE_2 --file-prefix flow --socket-mem 4096,4096 -b $LC1P1 -b $LC1P0 -b $LC0P0 > /tmp/flow_monitor.dat &
+	sudo -E ./build/FlowMon-DPDK -l $FLOWMON_MAINCORE,$FLOWMON_CORE_1,$FLOWMON_CORE_2 --file-prefix flow --socket-mem 4096,4096 -b $LC1P1 -b $LC1P0 -b $LC0P0 > /tmp/flow_monitor.dat &
 	sleep 30
 	sudo -E $SCRIPTS/start_vpp_singlecore_cpu.sh
 	echo "NO ELOG"
