@@ -1,4 +1,4 @@
-sudo killall FlowCount
+sudo killall FlowMon-DPDK
 sudo killall vpp_main
 sudo killall pktgen
 
