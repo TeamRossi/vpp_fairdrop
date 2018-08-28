@@ -43,6 +43,19 @@ FDL_CYCLES=5
 TDH_CYCLES=25
 TDL_CYCLES=2.8
 
+HFDTX_PPS=$(python -c "print(round($FD_TX/20.0))")
+HTDTX_PPS=$(python -c "print(round($TD_TX/20.0))")
+LFDTX_PPS=$(python -c "print(round($FD_TX/20.0))")
+LTDTX_PPS=$(python -c "print(round($TD_TX/20.0))")
+
+HFD_PPS=$(python -c "print(round($FD_OUTPUT/182.0))")
+LFD_PPS=$(python -c "print(round($FD_OUTPUT*10/182.0))")
+
+HTD_PPS=$(python -c "print(round($FD_OUTPUT/20.0))")
+LTD_PPS=$HTD_PPS
+
+
+
 if [[ $FD_RX_MISS_X -eq 0 && TD_RX_MISS_X -eq 0 ]];then
 	F=1
 fi
@@ -75,6 +88,18 @@ if [[ $FD_RX_MISS_X -eq 0 && TD_RX_MISS_X -gt 0 && FD_DROP_X -gt 0 ]];then
 	sed -i -e "s/FDO_CYCLES/$FDO_CYCLES/" $PLOTS/sanki_$1_$2_$3.svg
 	sed -i -e "s/TDO_CYCLES/$TDO_CYCLES/" $PLOTS/sanki_$1_$2_$3.svg
 
+	sed -i -e "s/HFDTX_PPS/$HFDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LFDTX_PPS/$LHDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HTDTX_PPS/$HTDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LTDTX_PPS/$LTDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HFD_PPS/$HFD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LFD_PPS/$LFD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HTD_PPS/$HTD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LTD_PPS/$LTD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
 fi
 if [[ $FD_RX_MISS_X -gt 0 && TD_RX_MISS_X -gt 0 && FD_DROP_X -gt 0 ]];then
 	cp $SCRIPTS/miss_fd_td.svg $PLOTS/sanki_$1_$2_$3.svg
@@ -106,5 +131,17 @@ if [[ $FD_RX_MISS_X -gt 0 && TD_RX_MISS_X -gt 0 && FD_DROP_X -gt 0 ]];then
 	
 	sed -i -e "s/FDO_CYCLES/$FDO_CYCLES/" $PLOTS/sanki_$1_$2_$3.svg
 	sed -i -e "s/TDO_CYCLES/$TDO_CYCLES/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HFDTX_PPS/$HFDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LFDTX_PPS/$LHDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HTDTX_PPS/$HTDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LTDTX_PPS/$LTDTX_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HFD_PPS/$HFD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LFD_PPS/$LFD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+
+	sed -i -e "s/HTD_PPS/$HTD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
+	sed -i -e "s/LTD_PPS/$LTD_PPS/" $PLOTS/sanki_$1_$2_$3.svg
 	
 fi
