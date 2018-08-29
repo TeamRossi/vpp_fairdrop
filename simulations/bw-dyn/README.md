@@ -18,7 +18,7 @@ flowsize 3000.00, theta 1.00, VQthresh 10.00 VPthresh 0.00
 shares: class1 0.40, class2 0.40, class3 0.00, class4 0.00, class5 0.00, class6 0.00, single packets 0.20, total 
 rate: class1 1.50, class2 1.50, class3 0.00, class4 0.00, class5 0.00, class6 0.00 
 batching: max number 1, max time   10.0 
-
+```
 1000  	 0.426 	 0.448 	  0.72 	 19.38 	  0.81
 2000  	 0.410 	 0.446 	  0.73 	 20.18 	  0.81
 3000  	 0.457 	 0.452 	  0.69 	 18.01 	  0.82
@@ -39,7 +39,7 @@ batching: max number 1, max time   10.0
 18000  	 0.447 	 0.458 	  0.70 	 18.34 	  0.82
 19000  	 0.467 	 0.449 	  0.69 	 17.45 	  0.81
 20000  	 0.452 	 0.433 	  0.70 	 18.35 	  0.81
-
+```
 load, per class throughput and drop rate; 90, 99 and 99.9 percentiles  of queue length, priority queue, activelist 
 0.55  cl0 th'put  0.445  0.702  cl1 th'put  0.446  0.702    18.474   31    64    116    0.815    0      1      2       1.76     3     8     13 
 class   thruput   drop rate 
