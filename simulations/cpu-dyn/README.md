@@ -1,9 +1,9 @@
 This program simulates cpu sharing with responsive flows. The responsiveness is realized by setting the input rate to "pktload" times the current fair rate (in cycles/s for fair drop and packet/s for tail drop).
 
-Choose tail drop by setting "taildrop" to 1 (otherwise the rates fair drop)
+Choose tail drop by setting "taildrop" to 1 (otherwise the program simulates fair drop)
 
 All parameters are currently set in the program, including:
-
+```
 alpha, beta - adaptive threshold MIMD parameters
 flowsize - constant size of flow in packets
 buffer - buffer size
@@ -15,11 +15,11 @@ pktload - degree of responsiveness (eg 1.1 means flows emit 10% higher than fair
 singlesize - cost in cycles of singleton packets
 vector - max batch size
 load - overall load = flow arrival rate x size in packet x cycles/pkt summed over classes and singleton flows
+```
+NB: program currently has a loop over load values but may bug if there are too many cases.
 
-NB: program currently has a loop over load values but may bug if there are too many cases - I didn't find the bug due to some variables being overwritten... best perhaps to set load for each run.
-
-An example run for load .55 now gives the following output
-
+An example run for load .55 gives the following output
+```
 FAIR DROP: VQthresh min 10.24, max 51200.00, 
 MIMD adaptive rate parameters, alpha=0.50, beta=1.20 
 Responsive flow rates set to 1.10 times fair rate
@@ -40,11 +40,12 @@ class   cycles/s   pkts/s drop rate tail drop  fair drop
   0     0.388     0.388   0.155     0.003     0.152
   1     0.419     0.042   0.111     0.005     0.107
 Poisson loss rate 0.001 
-
+```
 This run was for 5000 flows only. The results in the paper are for 20000 flows per load value.
 
-Graphical results are given by the gnuplot script. It requires data files TD10o5-plot-new.txt and FD10o5-plot-new.txt that I created manually by copying the line of output begining with the load for the set of loads from .05 to .95, ie lines like 
+Graphical results are given by the gnuplot script. It requires data files TD10o5-plot-new.txt and FD10o5-plot-new.txt that were created manually by copying the line of output begining with the load for the set of loads from .05 to .95, ie lines like 
+```
 0.55  cl0  0.388  0.388  0.155  0.003  0.152  cl1  0.419  0.042  0.111  0.005  0.107  153.665  quantiles:     90     143     153 
+```
 
-(the files used for the paper are in the folder; one unused output value is bugged and in the current version I replaced it by the string 'quantiles:' to keep the same gnuplot script)
 
