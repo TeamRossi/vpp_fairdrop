@@ -14,6 +14,7 @@ vectortime - time out for batch, batch formed if less than vector packets arrive
 NB: results not very good with batch>1 since throughput often lost waiting for batch formation
 warmup, sumflows - used to limit warm up perion and run length (limits in code 1000 and 20000)
 ```
+Sample output for load .55
 ```
 flowsize 3000.00, theta 1.00, VQthresh 10.00 VPthresh 0.00 
 shares: class1 0.40, class2 0.40, class3 0.00, class4 0.00, class5 0.00, class6 0.00, single packets 0.20, total 
