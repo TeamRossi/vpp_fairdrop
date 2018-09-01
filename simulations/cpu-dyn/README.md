@@ -16,7 +16,7 @@ singlesize - cost in cycles of singleton packets
 vector - max batch size
 load - overall load = flow arrival rate x size in packet x cycles/pkt summed over classes and singleton flows
 ```
-NB: program currently has a loop over load values but may bug if there are too many cases.
+NB: program currently has a loop over load values but may bug if there are too many cases (don't know why).
 
 An example run for load .55 gives the following output
 ```
