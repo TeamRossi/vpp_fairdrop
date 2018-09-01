@@ -1,7 +1,7 @@
-This program simulates bandwidth sharing with fair drop. Flows have a fixed rate. The value of this rate is not entirely arbitrary, We found the need to have a high rate at low loads so that one flow alone can saturate the link. On the other hand, a high rate when there are many flows in progress (eg, at high loads) leads to some spurious performance effects. Rather than discuss these effects, I preferred to modify the per-flow Poisson rate as a function of load. We have a rate of 1.5 (1 saturates the link) at lower loads decreasing to 1 for loads greater than .5. Hard for reproducibility !
+This program simulates bandwidth sharing with fair drop. Flows have a fixed rate. The value of this rate is not entirely arbitrary, We found the need to have a high rate at low loads so that one flow alone can saturate the link. On the other hand, a high rate when there are many flows in progress (eg, at high loads) leads to some spurious performance effects. For the presented results we used a rate of 1.5 (1 saturates the link) at lower loads decreasing to 1 for loads greater than .5. Hard for reproducibility !
 
 Program parameters are set in the code:
-
+```
 flowsize - constant flow size in packets
 theta - allows virtual dequeues at rate theta times less than link rate to reduce latency (not used in paper)
 load - link load, flow arrival rate x average flow size
@@ -13,12 +13,13 @@ vector - max batch size, set to 1 for paper results
 vectortime - time out for batch, batch formed if less than vector packets arrive before vectortime since last batch
 NB: results not very good with batch>1 since throughput often lost waiting for batch formation
 warmup, sumflows - used to limit warm up perion and run length (limits in code 1000 and 20000)
-
+```
+```
 flowsize 3000.00, theta 1.00, VQthresh 10.00 VPthresh 0.00 
 shares: class1 0.40, class2 0.40, class3 0.00, class4 0.00, class5 0.00, class6 0.00, single packets 0.20, total 
 rate: class1 1.50, class2 1.50, class3 0.00, class4 0.00, class5 0.00, class6 0.00 
 batching: max number 1, max time   10.0 
-```
+
 1000  	 0.426 	 0.448 	  0.72 	 19.38 	  0.81
 2000  	 0.410 	 0.446 	  0.73 	 20.18 	  0.81
 3000  	 0.457 	 0.452 	  0.69 	 18.01 	  0.82
@@ -39,13 +40,16 @@ batching: max number 1, max time   10.0
 18000  	 0.447 	 0.458 	  0.70 	 18.34 	  0.82
 19000  	 0.467 	 0.449 	  0.69 	 17.45 	  0.81
 20000  	 0.452 	 0.433 	  0.70 	 18.35 	  0.81
-```
+
 load, per class throughput and drop rate; 90, 99 and 99.9 percentiles  of queue length, priority queue, activelist 
 0.55  cl0 th'put  0.445  0.702  cl1 th'put  0.446  0.702    18.474   31    64    116    0.815    0      1      2       1.76     3     8     13 
 class   thruput   drop rate 
   0     0.445     0.702
   1     0.446     0.702
+```
 
 Graphical results from gnuplot script gnu-bwshare.txt using manually created data file bw-greedyFD-plot.txt. This is a list of lines like 
+```
 0.55  cl0 th'put  0.445  0.702  cl1 th'put  0.446  0.702    18.474   31    64    116    0.815    0      1      2       1.76     3     8     13
+```
 taken from each run for a given load. The program has a for loop for running a set of loads (with the same clrate parameters).
